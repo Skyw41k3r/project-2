@@ -1,2 +1,5 @@
-DROP DATABASE IF EXISTS user_db;
-CREATE DATABASE user_db;
+DROP DATABASE IF EXISTS dadabase_db;
+CREATE DATABASE dadabase_db;
+
+USE dadabase_db;
+
