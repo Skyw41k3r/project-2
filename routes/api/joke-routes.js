@@ -10,10 +10,10 @@ router.get('/', (req, res) => {
       attributes: ['joke', 'id']
     }
 })
-  .then(jokeResponse => {
-    const posts = jokeResponse.map(post => post.get({ plain: true }))
-        res.render('homepage', {posts, loggedIn: req.session.loggedIn, title: 'Home'})
-    })
+  .then(jokeResponse => 
+    res.json(jokeResponse))
+    // const posts = jokeResponse.map(post => post.get({ plain: true }))
+    //     res.render('homepage', {posts, loggedIn: req.session.loggedIn, title: 'Home'})
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -38,8 +38,28 @@ router.get('/', (req, res) => {
 
 // post new joke to database 
 router.post('/', (req, res) => {
-  
-})
+  jokes.create({
+    jokes: req.body.jokes
+  })
+  .then(jokeResponse => res.json(jokeResponse))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+// post new punchline to database
+router.post('/', (req, res) => {
+  zingers.create({
+    zingers: req.body.zingers
+  })
+  .then(zingerResponse => res.json(zingerResponse))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
 
 
 
