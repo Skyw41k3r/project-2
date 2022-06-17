@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadabase</title>
+</head>
+<body>
+    <header>
+    <h1>Welcome to Dad Comedy Central</h1>
+    {{#if logged_in}}
+    <nav>
+    <button class="button" id="logout">Logout</button>
+    </nav>
+    {{/if}}
+    </header>
+
+    <main class="container container-fluid">
+        {{{body}}}
+    </main>
+
+    <footer>
+        <p>Special Thanks To Our Creators</p>
+        <ol>
+            <li>Kevin Doolittle</li>
+            <li>Mike Walker</li>
+            <li>Leandro Machado</li>
+            <li>Caleb Norcross</li>
+        </ol>
+    </footer>
+
+    {{#if logged_in}}
+    <script src="/public/css/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
