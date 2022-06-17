@@ -37,6 +37,10 @@ router.get('/', (req, res) => {
 });
 
 // post new joke to database 
+router.post('/', (req, res) => {
+  
+})
+
 
 
 module.exports = router;
