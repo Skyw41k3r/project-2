@@ -15,6 +15,10 @@ jokes.init(
     joke: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    zinger: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
 
   },
