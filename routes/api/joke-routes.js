@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   jokes.findAll({
     include: {
       model: jokes,
-      attributes: ['joke', 'id']
+      attributes: ['id', 'joke', 'zinger']
     }
 })
   .then(jokeResponse => 
@@ -21,20 +21,20 @@ router.get('/', (req, res) => {
 });
 
 // get punchline route 
-router.get('/', (req, res) => {
+// router.get('/', (req, res) => {
  
-    zingers.findAll({
-      include: {
-        model: zingers,
-        attributes: ['zinger', 'id']
-    }
-})
-.then(zingerResponse => res.json(zingerResponse))
-.catch(err => {
-  console.log(err);
-  res.status(500).json(err);
-})
-});
+//     zingers.findAll({
+//       include: {
+//         model: zingers,
+//         attributes: ['zinger', 'id']
+//     }
+// })
+// .then(zingerResponse => res.json(zingerResponse))
+// .catch(err => {
+//   console.log(err);
+//   res.status(500).json(err);
+// })
+// });
 
 // post new joke to database 
 router.post('/', (req, res) => {
@@ -49,18 +49,16 @@ router.post('/', (req, res) => {
 });
 
 // post new punchline to database
-router.post('/', (req, res) => {
-  zingers.create({
-    zingers: req.body.zingers
-  })
-  .then(zingerResponse => res.json(zingerResponse))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
-});
-
-
+// router.post('/', (req, res) => {
+//   zingers.create({
+//     zingers: req.body.zingers
+//   })
+//   .then(zingerResponse => res.json(zingerResponse))
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   })
+// });
 
 
 module.exports = router;
