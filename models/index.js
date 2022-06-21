@@ -1,6 +1,5 @@
 const User = require('./User');
-const jokes = require('./jokes');
+const Jokes = require('./Jokes');
 
 
-
-module.exports = { User, jokes};
+module.exports = { User, Jokes};

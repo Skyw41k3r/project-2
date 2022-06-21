@@ -1,0 +1,37 @@
+<!-- Icon Card Example -->
+<div class="card card-icon">
+    <div class="row no-gutters">
+        <div class="col-auto card-icon-aside bg-primary">
+            <i data-feather="layers">
+              <i class="fa fa-pencil" aria-hidden="true"></i>  
+            </i>
+        </div>
+        <div class="col">
+            <div class="card-body py-5">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">
+                  {{content}}
+
+                  <br><br>
+                    <a href="/dashboard/edit/{{id}}" class="btn btn-warning">Edit Post</a>
+                    <a href="/post/{{id}}" class="btn btn-info">{{comment.length}} {{format_plural "comment" comments.length}}</a>
+                   
+                </p>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted">{{user.username}} - {{created_at}}</div>
+            </div>
+
+            {{#each comments}}
+              <div class="alert alert-primary fade show mr-4" role="alert">
+                  <h5 class="alert-heading">{{user.username}} - {{format_date created_at}}</h5>
+                  {{comment_text}}
+              </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,46 @@
+<div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
+            <div class="container-xl px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <!-- Basic login form-->
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header justify-content-center">
+                                <h3 class="fw-light my-4">Edit Post</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- Login form-->
+                                <form id="edit-post">
+
+                                    <input type="hidden" value="{{post.id}}" id="post-id">
+                            
+                                    <div class="mb-2">
+                                        <label class="label">Title</label>
+                                        <textarea class="form-control" placeholder="Title" id="title" id="title"> {{ post.title }}</textarea>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="label post-content">Content</label>
+                                        <textarea class="form-control" placeholder="Hello world" id="content" name="content">{{post.content}}</textarea>
+                                    </div>
+
+                                    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+                                    <br><br>
+                                
+                                    <input type="submit" class="btn btn-warning" id="update-post" value="Update Post">
+                                    <button class="btn btn-danger" id="delete-post">Delete Post</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+        
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>

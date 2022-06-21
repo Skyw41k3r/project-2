@@ -1,0 +1,100 @@
+<section>
+      <!-- Main page zinger-->
+    <div class="container-xl px-4">
+
+        <!-- Page title -->
+        <h2 class="mb-0 mt-5">My dashboard lit up before the fin fell off the back of my car. <small style="font-size:10px;">Spoiler alert.</small></small></h2>
+        <hr class="mt-2 mb-4" />
+
+        <div class="row">
+            <div class="col-7 left-side">
+
+                {{#if JokeList.length}}
+                    {{#each JokeList as |joke|}}
+                        <div class="card text-white bg-dark mb-3 jokes" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title mainjoke">{{joke.joke}}</h5>
+                                <p class="card-text"><small class="jokezinger">{{ joke.zinger }}</small></p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-sm btn-warning edit-joke" data-id="{{joke.id}}">Edit</button>
+                                <button class="btn btn-sm btn-danger delete-joke" data-id="{{joke.id}}">Delete</button>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/if}}
+
+            </div>
+
+            <div class="col-5 right-size">
+
+                <div class="row">
+
+                    <!-- Let's make a joke -->
+                    <div class="col-12">
+
+                        <div class="card mt-4" id="development-card">
+                            <div class="card-body">
+
+                                
+                                <form class="mb-3" id="create-joke">
+
+                                    <h2>Joke Development Tool</h2>
+
+                                    <div class="mb-3">
+                                        <label class="label joke-title">Tell me something funny?</label>
+                                        <textarea class="form-control" placeholder="Bad joke" id="njoke" name="joke"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="label">Punch Line! <small style="font-size:10px;">Be sure to duck `quack`</small></label>
+                                        <textarea class="form-control" placeholder="Zinger" id="nzinger" name="zinger"></textarea>
+                                    </div>
+
+                                    <input class="btn btn-primary w-100" type="submit" value="Create Haha!">
+                                    
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="card mt-4" id="edit-card" style="display:none;">
+                            <div class="card-body">
+
+                                <form id="edit-joke">
+
+                                    <h2>Not Funny Fixing Tool</h2>
+
+                                    <input type="hidden" id="ejoke-id" value="">
+                                    <div class="mb-3">
+                                        <label class="label joke-title">Tell me something funny?</label>
+                                        <textarea class="form-control" placeholder="Bad joke" id="ejoke" name="joke"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="label">Punch Line! <small style="font-size:10px;">Be sure to duck `quack`</small></label>
+                                        <textarea class="form-control" placeholder="Zinger" id="ezinger" name="zinger"></textarea>
+                                    </div>
+
+                                    <input class="btn btn-warning w-100" type="submit" value="Create Haha!">
+                                    
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+<script src="/js/create-joke.js"></script>
+<script src="/js/edit-joke.js"></script>
+<script src="/js/delete-joke.js"></script>
