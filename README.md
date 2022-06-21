@@ -6,6 +6,7 @@ Our application was mainly developed in the backend and made use of NodeJs and E
 
 # Preview 📷
 ![](images/image.png)
+
 # Resources and Credits 📣
 Node.Js and RESTful API https://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm
 
