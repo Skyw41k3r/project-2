@@ -5,7 +5,8 @@ const jokes = require('../models/jokes');
 const userData = require('./userData.json');
 const jokesData = require('./jokes.json')
 
-const seedDatabase = async() => {
+
+const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     await User.bulkCreate(userData, {
