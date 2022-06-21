@@ -1,0 +1,6 @@
+{{#each this}}
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <h5 class="alert-heading">{{user.username}} - {{format_date created_at}}</h5>
+        {{comment_text}}
+    </div>
+{{/each}}

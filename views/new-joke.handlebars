@@ -1,0 +1,30 @@
+{{!-- new post --}}
+<div class="container-xl px-4">
+    {{> post-info post }}
+
+    <hr>
+
+    {{#if loggedIn}}
+
+    <form  id="add-comment">
+        <h2>Add Comment</h2>
+
+        <div class="mb-3">
+            <input type="hidden" id="post-id" name="post-id" value="{{post.id}}" />
+            <textarea class="textarea form-control"  id="comment" name="comment" ></textarea>
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <input type="submit" value="Add Comment" class="btn btn-primary" />
+        </div>
+    </form>
+    {{/if}}
+
+    {{> comments post.comments}}
+
+</div>
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
