@@ -3,7 +3,7 @@ const { User } = require('../models')
 
 router.get('/', async (req, res) => {
     try {
-      const UserData = await User.findByPk({
+      const UserData = await User.findOne({
         include: [
           {
             model: User,
@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
           },
         ],
       });
-      const Users = UserData.map((project) => Users.get({ plain: true }));
+      const Users = UserData.map((User) => Users.get({ plain: true }));
   
       res.render('homepage', { 
         Users, 
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
 router.get('/login', async (req, res) => {
     if (req.session.loggedIn){
-        res.redirect('/homepage');
+        res.redirect('/');
         return;
     }
 
