@@ -2,7 +2,7 @@
 We have created an application where friends with an account will be able to read and post dad jokes!
 
 # About
-Our application was mainly developed in the backend and made use of NodeJs and ExpressJs to create a RESTful API. Handlebars.js was used as our visual template to facilitate the generation of our application in the frontend. Our application also made use of MYSQL for the purpose of creating our database which contains a list of jokes and puns. This app is by subscription only thus any new user will be pronpted to be autheticated via a user login and a user logout.
+Our application was mainly developed in the backend and made use of NodeJs and ExpressJs to create a RESTful API. Handlebars.js was used as our visual template to facilitate the generation of our application in the frontend. Our application also made use of MYSQL for the purpose of creating our database which contains a list of jokes and puns. This app is by subscription only thus any new user will be prompted to be autheticated via a user login and a user logout.
 
 # Preview 📷
 ![](images/image.png)
