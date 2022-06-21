@@ -16,7 +16,7 @@ jokes.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    zinger: {
+    zinger: { 
       type: DataTypes.STRING,
       allowNull: false
     }
