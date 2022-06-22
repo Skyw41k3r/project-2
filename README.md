@@ -4,6 +4,10 @@ We have created an application where friends with an account will be able to rea
 # About
 Our application was mainly developed in the backend and made use of NodeJs and ExpressJs to create a RESTful API. Handlebars.js was used as our visual template to facilitate the generation of our application in the frontend. Our application also made use of MYSQL for the purpose of creating our database which contains a list of jokes and puns. This app is by subscription only thus any new user will be prompted to be authenticated via user login and a user logout.
 
+# Deployment 🚀
+Our app was deployed through Heroku.
+Contribute to commedy and check it out yourself!| https://the-dadabase.herokuapp.com
+
 # Preview 📷
 ![](images/image.png)
 
