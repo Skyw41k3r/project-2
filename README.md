@@ -6,6 +6,7 @@ Our application was mainly developed in the backend and made use of NodeJs and E
 
 # Deployment 🚀
 Our app was deployed through Heroku.
+
 Contribute to commedy and check it out yourself!| https://the-dadabase.herokuapp.com
 
 # Preview 📷
